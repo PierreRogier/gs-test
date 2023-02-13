@@ -1,8 +1,7 @@
 import "leaflet/dist/leaflet.css";
 import React, { FC } from "react";
-import { Circle, LayersControl, MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { Circle, MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
-// import { farmIcon, productIcon } from "@/common";
 
 export const farmIcon = L.icon({
 	iconUrl: `/icons/grange.png`,

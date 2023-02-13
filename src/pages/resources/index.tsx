@@ -3,7 +3,7 @@ import React, { FC, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Modal, ProtectedRoute } from "@/components";
 import styles from "@/styles/views/Resources/Resources.module.scss";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "@/firebase/firebase.config";
 import { FarmWithId, ProductWithId } from "@/models";
 import { distanceBetweenTwoPoints } from "@/utils";
@@ -15,7 +15,6 @@ const MapList = dynamic(() => import("@/components/MapList/MapList"), { ssr: fal
 interface ResourcesProps {}
 
 const Resources: FC<ResourcesProps> = () => {
-	const [isLoading, setIsLoading] = useState(true);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [farms, setFarms] = useState<FarmWithId[]>([]);
 	const [products, setProducts] = useState<ProductWithId[]>([]);
@@ -56,7 +55,6 @@ const Resources: FC<ResourcesProps> = () => {
 		};
 	}, []);
 
-	// if (isLoading) return <p>Loading...</p>;
 
 	return (
 		<ProtectedRoute>

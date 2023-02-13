@@ -1,6 +1,5 @@
 import { FarmWithId, ProductWithId } from "@/models";
 import React, { FC } from "react";
-import { motion, useDragControls } from "framer-motion";
 import styles from "./ProductsAndFarmsList.module.scss";
 import { Product } from "./Product/Product";
 import { Farm } from "./Farm/Farm";
@@ -11,7 +10,6 @@ interface ProductAndFarmsListProps {
 }
 
 const ProductAndFarmsList: FC<ProductAndFarmsListProps> = ({ farms, products }) => {
-	const controls = useDragControls();
 	const myArr = [...farms, ...products];
 	const sortedArr = myArr.sort((a, b) => a.distance - b.distance);
 

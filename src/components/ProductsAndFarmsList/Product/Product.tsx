@@ -1,6 +1,6 @@
 import { db } from "@/firebase/firebase.config";
 import { ProductWithId } from "@/models";
-import { collection, doc, updateDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import React, { FC, useState } from "react";
 import styles from "./Product.module.scss";
 
