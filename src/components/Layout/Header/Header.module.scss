@@ -1,3 +1,4 @@
+@use "@/styles/mixins" as mix;
 @import "@/styles/variables";
 
 .wrapper {
@@ -15,11 +16,75 @@
 }
 
 .infos {
+	display: none;
+	@include mix.screen-md {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		p {
+			font-weight: bold;
+		}
+	}
+}
+
+.phoneMenu {
+	display: block;
+	@include mix.screen-md {
+		display: none;
+	}
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+	gap: 1rem;
+	background-color: $primary-color-400;
+	transform: translateX(-100%);
+	transition: all 0.3s ease;
+	z-index: 9999;
+
+	header {
+		text-align: end;
+	}
+
+	nav {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	@include mix.screen-md {
+		display: none;
+	}
+}
+
+.menuInfos {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
-	p {
-		font-weight: bold;
-	}
+.menuOpen {
+	transform: translateX(0);
+}
+
+.link {
+	background-color: transparent;
+	border: none;
+	color: $gray-color-600;
+	font-size: $font-size-3xl;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
 }
