@@ -80,7 +80,7 @@ const ProductForm: FC<ProductFormProps> = ({ position, isValidCoordinates }) => 
 
 	return (
 		<div className={styles.wrapper}>
-			<h2>Ajout d'un produit</h2>
+			<h2>Ajout d&apos;un produit</h2>
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.formGroup}>
 					<h3>Produit</h3>

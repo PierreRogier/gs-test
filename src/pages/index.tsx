@@ -40,7 +40,7 @@ export default function Home() {
 						<p>
 							Nous sommes tous conscients du besoin d’évoluer vers des pratiques plus
 							durables. Cependant, face aux impératifs de rendement, à la difficulté
-							d'adopter des pratiques alternatives, ou à l’incertitude apportée par le
+							dadopter des prat&apos;iques alternatives, ou à l’incertitude apportée par le
 							changement climatique, il peut être difficile de franchir le cap.
 							Comment peut-on faire évoluer les pratiques quand cela comporte autant
 							de risques ?

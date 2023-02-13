@@ -93,7 +93,7 @@ const FarmForm: FC<FarmFormProps> = ({ position, isValidCoordinates }) => {
 
 	return (
 		<div className={styles.wrapper}>
-			<h2>Ajout d'une Ferme</h2>
+			<h2>Ajout d&apos;une Ferme</h2>
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.formGroup}>
 					<h3>Ferme</h3>
