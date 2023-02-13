@@ -15,6 +15,10 @@ const CreateResource: FC<CreateResourceProps> = () => {
 	const [position, setPosition] = useState<L.LatLngTuple | undefined>(undefined);
 	const [isValidCoordinates, setIsValidCoordinates] = useState(false);
 
+	const resetPosition = () => {
+		setPosition(undefined);
+	};
+
 	useEffect(() => {
 		if (!!position) {
 			const distance = distanceBetweenTwoPoints(center, position);
@@ -55,11 +59,16 @@ const CreateResource: FC<CreateResourceProps> = () => {
 					</div>
 					<div className={styles.formContainer}>
 						{isFarmForm ? (
-							<FarmForm position={position} isValidCoordinates={isValidCoordinates} />
+							<FarmForm
+								position={position}
+								isValidCoordinates={isValidCoordinates}
+								resetPosition={resetPosition}
+							/>
 						) : (
 							<ProductForm
 								position={position}
 								isValidCoordinates={isValidCoordinates}
+								resetPosition={resetPosition}
 							/>
 						)}
 					</div>

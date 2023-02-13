@@ -33,10 +33,12 @@ import { addDoc, collection, GeoPoint } from "firebase/firestore";
 interface FarmFormProps {
 	position: L.LatLngTuple | undefined;
 	isValidCoordinates: boolean;
+	resetPosition: () => void;
 }
 
-const FarmForm: FC<FarmFormProps> = ({ position, isValidCoordinates }) => {
+const FarmForm: FC<FarmFormProps> = ({ position, isValidCoordinates, resetPosition }) => {
 	const [serverError, setServerError] = useState("");
+	const [isSuccess, setIsSuccess] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const {
 		register,
@@ -71,8 +73,14 @@ const FarmForm: FC<FarmFormProps> = ({ position, isValidCoordinates }) => {
 					tel: data.tel,
 				},
 			});
+
 			setIsLoading(false);
+			setIsSuccess(true);
+			resetPosition();
 			reset();
+			setTimeout(() => {
+				setIsSuccess(false);
+			}, 3000);
 		} catch (error) {
 			console.error(error);
 			if (error instanceof FirebaseError) {
@@ -94,6 +102,7 @@ const FarmForm: FC<FarmFormProps> = ({ position, isValidCoordinates }) => {
 	return (
 		<div className={styles.wrapper}>
 			<h2>Ajout d&apos;une Ferme</h2>
+			{isSuccess && <p className={styles.successMessage}>création réussie</p>}
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.formGroup}>
 					<h3>Ferme</h3>

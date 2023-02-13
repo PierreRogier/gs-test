@@ -22,10 +22,12 @@ type FormInputs = yup.InferType<typeof schema>;
 interface ProductFormProps {
 	position: L.LatLngTuple | undefined;
 	isValidCoordinates: boolean;
+	resetPosition: () => void;
 }
 
-const ProductForm: FC<ProductFormProps> = ({ position, isValidCoordinates }) => {
+const ProductForm: FC<ProductFormProps> = ({ position, isValidCoordinates, resetPosition }) => {
 	const [serverError, setServerError] = useState("");
+	const [isSuccess, setIsSuccess] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 
 	const {
@@ -57,9 +59,13 @@ const ProductForm: FC<ProductFormProps> = ({ position, isValidCoordinates }) => 
 				alias: data.alias,
 				location: new GeoPoint(data.lat, data.lng),
 			});
-
 			setIsLoading(false);
+			setIsSuccess(true);
+			resetPosition();
 			reset();
+			setTimeout(() => {
+				setIsSuccess(false);
+			}, 3000);
 		} catch (error) {
 			console.error(error);
 			if (error instanceof FirebaseError) {
@@ -81,6 +87,7 @@ const ProductForm: FC<ProductFormProps> = ({ position, isValidCoordinates }) => 
 	return (
 		<div className={styles.wrapper}>
 			<h2>Ajout d&apos;un produit</h2>
+			{isSuccess && <p className={styles.successMessage}>création réussie</p>}
 			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.formGroup}>
 					<h3>Produit</h3>
