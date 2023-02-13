@@ -1,0 +1,115 @@
+@use "../mixins" as mix;
+@import "../variables";
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapperContent {
+	max-width: $screen-size-lg;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3rem;
+
+	@include mix.screen-md {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5rem;
+	}
+}
+
+.imgContainer {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include mix.screen-md {
+		height: 100%;
+	}
+}
+
+.contentContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+
+	h1 {
+		font-size: $font-size-5xl;
+		text-align: center;
+		@include mix.screen-md {
+			text-align: start;
+			font-size: $font-size-7xl;
+		}
+	}
+
+	p {
+		font-size: $font-size-lg;
+	}
+
+	button{
+		align-self: center;
+	}
+}
+
+.modalContainer {
+	position: relative;
+	min-height: 500px;
+	height: 90vh;
+	max-width: 800px;
+	width: 95vw;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	color: black;
+	overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+
+	@include mix.screen-md {
+		max-height: 50vh;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include mix.screen-lg {
+		width: 70vw;
+	}
+}
+
+.logoContainer {
+	order: 2;
+	max-height: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: $size-md;
+	background-color: $secondary-color-400;
+	overflow: hidden;
+
+	@include mix.screen-md {
+		order: 1;
+		max-height: 100%;
+	}
+}
+
+.closeBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 0.2rem;
+	cursor: pointer;
+}

@@ -1,0 +1,44 @@
+@use "../../mixins" as mix;
+@import "../../variables";
+
+.wrapper {
+	max-width: $screen-size-lg;
+	margin-inline: auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem 0;
+}
+
+.modalContainer {
+	position: relative;
+	min-height: 500px;
+	height: 90vh;
+	max-width: 1000px;
+	width: 95vw;
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+	background-color: $white;
+	overflow-y: scroll;
+
+	h2 {
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+}
+
+.mapContainer {
+	flex: 1;
+	height: 100%;
+}

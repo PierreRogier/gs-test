@@ -1,0 +1,51 @@
+@import "@/styles/variables";
+
+.wrapper {
+    // padding-bottom: 2rem;
+}
+
+.contentContainer {
+    max-height: 80vh;
+	overflow-x: scroll;
+
+	&::-webkit-scrollbar {
+		height: 8px;
+		width: 8px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background: $gray-color-600;
+		cursor: pointer;
+	}
+}
+
+.listContainer {
+    background-color: transparent;
+    min-width: max-content;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 0.5rem;
+	padding: 0.3rem;
+}
+
+.product {
+	background-color: $primary-color-100;
+}
+
+.farm {
+	background-color: $secondary-color-100;
+	// color: $white;
+}

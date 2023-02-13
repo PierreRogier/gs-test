@@ -1,0 +1,19 @@
+@import "@/styles/variables";
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 0.5rem;
+	padding: 0.3rem;
+}
+
+.product {
+	background-color: $primary-color-100;
+}
+
+.formControl {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}

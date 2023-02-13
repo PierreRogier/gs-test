@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	overflow: hidden;
+}
+
+body {
+	font-family: $comfortaa-font-family;
+	color: $gray-color-600;
+	background-color: $gray-color-50;
+}
+
+ul {
+	list-style: none;
+}

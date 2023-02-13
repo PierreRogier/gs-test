@@ -1,0 +1,134 @@
+// COLORS
+$white: #ffffff;
+$black: #000000;
+
+$primary-color-50: #ecfdf5;
+$primary-color-100: #d1fae5;
+$primary-color-200: #a7f3d0;
+$primary-color-300: #6ee7b7;
+$primary-color-400: #34d399;
+$primary-color-500: #10b981;
+$primary-color-600: #059669;
+$primary-color-700: #047857;
+$primary-color-800: #065f46;
+$primary-color-900: #064e3b;
+
+$secondary-color-50: #fff7ed;
+$secondary-color-100: #ffedd5;
+$secondary-color-200: #fed7aa;
+$secondary-color-300: #fdba74;
+$secondary-color-400: #fb923c;
+$secondary-color-500: #f97316;
+$secondary-color-600: #ea580c;
+$secondary-color-700: #c2410c;
+$secondary-color-800: #9a3412;
+$secondary-color-900: #7c2d12;
+
+$gray-color-50: #fafafa;
+$gray-color-100: #f4f4f5;
+$gray-color-200: #e4e4e7;
+$gray-color-300: #d4d4d8;
+$gray-color-400: #a1a1aa;
+$gray-color-500: #71717a;
+$gray-color-600: #52525b;
+$gray-color-700: #3f3f46;
+$gray-color-800: #27272a;
+$gray-color-900: #18181b;
+
+$warning-color-50: #fefce8;
+$warning-color-100: #fef9c3;
+$warning-color-200: #fef08a;
+$warning-color-300: #fde047;
+$warning-color-400: #facc15;
+$warning-color-500: #eab308;
+$warning-color-600: #ca8a04;
+$warning-color-700: #a16207;
+$warning-color-800: #854d0e;
+$warning-color-900: #713f12;
+
+$danger-color-50: #fef2f2;
+$danger-color-100: #fee2e2;
+$danger-color-200: #fecaca;
+$danger-color-300: #fca5a5;
+$danger-color-400: #f87171;
+$danger-color-500: #ef4444;
+$danger-color-600: #dc2626;
+$danger-color-700: #b91c1c;
+$danger-color-800: #991b1b;
+$danger-color-900: #7f1d1d;
+
+$success-color-50: #f0fdf4;
+$success-color-100: #dcfce7;
+$success-color-200: #bbf7d0;
+$success-color-300: #86efac;
+$success-color-400: #4ade80;
+$success-color-500: #22c55e;
+$success-color-600: #16a34a;
+$success-color-700: #15803d;
+$success-color-800: #166534;
+$success-color-900: #14532d;
+
+// SIZES
+$size-none: 0;
+$size-8xs: 0.075rem;
+$size-7xs: 0.125rem;
+$size-6xs: 0.25rem;
+$size-5xs: 0.375rem;
+$size-4xs: 0.5rem;
+$size-3xs: 0.625rem;
+$size-2xs: 0.675rem;
+$size-xs: 0.75rem;
+$size-sm: 0.875rem;
+$size-md: 1rem;
+$size-lg: 1.125rem;
+$size-xl: 1.25rem;
+$size-2xl: 1.5rem;
+$size-3xl: 2rem;
+$size-4xl: 2.5rem;
+$size-5xl: 3rem;
+$size-6xl: 3.5rem;
+$size-7xl: 4rem;
+
+$screen-size-sm: 600px;
+$screen-size-md: 900px;
+$screen-size-lg: 1200px;
+
+// FONTS
+$comfortaa-font-family: "Comfortaa", cursive;
+
+$font-size-xs: 0.625rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 0.875rem;
+$font-size-default: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.375rem;
+$font-size-3xl: 1.5rem;
+$font-size-4xl: 2rem;
+$font-size-5xl: 3rem;
+$font-size-6xl: 4rem;
+$font-size-7xl: 5rem;
+
+// SHADOW
+$shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+$shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+$shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+$shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+$shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+$shadow-none: 0 0 #0000;
+
+// BORDER-RADIUS
+$radius-none: 0;
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 10px;
+$radius-2xl: 12px;
+$radius-3xl: 14px;
+$radius-4xl: 20px;
+$radius-full: 50%;
+
+//Layout
+$header-height: 4rem;

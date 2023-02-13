@@ -1,0 +1,41 @@
+@use "../../styles/mixins" as mix;
+@import "@/styles/variables";
+
+.wrapper {
+	padding: 1rem 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: $font-size-4xl;
+	}
+
+	@include mix.screen-md {
+		order: 2;
+		max-height: 100%;
+		gap: 5rem;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.formControl {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.errorMessage {
+	color: $danger-color-400;
+	font-size: $font-size-sm;
+}

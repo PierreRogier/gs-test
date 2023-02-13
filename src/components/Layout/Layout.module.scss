@@ -1,0 +1,26 @@
+@import "@/styles/variables";
+
+.wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.contentWrapper {
+	flex: 1;
+	display: flex;
+}
+
+.main {
+	flex: 1;
+	height: calc(100vh - $header-height);
+	padding: 0.5rem;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}

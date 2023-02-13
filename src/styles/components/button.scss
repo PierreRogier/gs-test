@@ -1,0 +1,55 @@
+.btn {
+	width: fit-content;
+	// padding: 0.5rem 2rem;
+	border: none;
+	background-color: transparent;
+	color: $gray-color-800;
+	font-family: $comfortaa-font-family;
+	font-size: $font-size-md;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	transition: all 0.1s ease-out;
+	cursor: pointer;
+
+	&:active:not(:disabled) {
+		transform: scale(0.95);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		background-color: $gray-color-100;
+		color: $gray-color-300;
+
+		&:hover {
+			transition: none;
+		}
+	}
+}
+
+.btn-sm {
+	padding: 0.3rem 1rem;
+	border-radius: $radius-sm;
+}
+.btn-md {
+	padding: 0.5rem 2rem;
+	border-radius: $radius-md;
+}
+.btn-lg {
+	padding: 1rem 4rem;
+	border-radius: $radius-lg;
+}
+
+.btn-primary {
+	background-color: $primary-color-400;
+	&:hover {
+		background-color: $primary-color-300;
+	}
+}
+
+.btn-secondary {
+	background-color: $secondary-color-400;
+	&:hover {
+		background-color: $secondary-color-300;
+	}
+}

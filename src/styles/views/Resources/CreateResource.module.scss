@@ -1,0 +1,33 @@
+@use "../../mixins" as mix;
+@import "../../variables";
+
+.wrapper {
+	max-width: $screen-size-lg;
+	margin-inline: auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+
+.contentContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	@include mix.screen-md {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5rem;
+	}
+}
+
+.mapContainer {
+	height: 400px;
+	@include mix.screen-md {
+		height: 100%;
+		min-height: 600px;
+	}
+}

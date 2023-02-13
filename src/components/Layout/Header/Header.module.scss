@@ -1,0 +1,25 @@
+@import "@/styles/variables";
+
+.wrapper {
+	height: $header-height;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0rem 1rem;
+	background-color: $primary-color-400;
+	color: $gray-color-800;
+
+	h3 {
+		font-size: $font-size-3xl;
+	}
+}
+
+.infos {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	p {
+		font-weight: bold;
+	}
+}
