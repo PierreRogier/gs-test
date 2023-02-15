@@ -1,4 +1,5 @@
 import { useAuth } from "@/contexts";
+import { IUser } from "@/models";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { FC, useState } from "react";
@@ -9,11 +10,14 @@ const SIDEBAR_LINKS = [
 	{ path: "/resources/create", name: "création" },
 ];
 
-interface HeaderProps {}
+interface HeaderProps {
+	user: IUser | null;
+	isLoggedIn: boolean;
+	logOut: () => void;
+}
 
-const Header: FC<HeaderProps> = () => {
+const Header: FC<HeaderProps> = ({ isLoggedIn, logOut, user }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const { isLoggedIn, logOut, user } = useAuth();
 	const router = useRouter();
 
 	const handleLogout = () => {

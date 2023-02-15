@@ -21,5 +21,6 @@ export const distanceBetweenTwoPoints = (point1: L.LatLngTuple, point2: L.LatLng
 };
 
 function toRadians(degree: number): number {
+	if (degree === 0) return 0;
 	return (degree * Math.PI) / 180;
 }

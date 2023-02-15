@@ -9,11 +9,11 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-	const { isLoggedIn } = useAuth();
+	const { isLoggedIn, logOut, user } = useAuth();
 
 	return (
 		<div className={styles.wrapper}>
-			<Header />
+			<Header isLoggedIn={isLoggedIn} logOut={logOut} user={user} />
 			<div className={styles.contentWrapper}>
 				{isLoggedIn && <Sidebar />}
 				<main className={styles.main}>{children}</main>
